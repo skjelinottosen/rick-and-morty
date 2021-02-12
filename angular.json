@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rick-and-morty"
+    }
+  },
+  "defaultProject": "rick-and-morty",
+  "cli": {
+    "analytics": "3e2f6daf-3953-4e8d-bfe1-2b5f01045633"
+  }
 }
