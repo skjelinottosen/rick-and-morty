@@ -1,0 +1,22 @@
+<img class="logo mt-3 mb-4" src="../../..//assets/images/logo.png"  alt="Rick and Morty logo">
+<main class="container-fluid main-container d-flex flex-wrap justify-content-center">
+    <div class="card mr-3 mb-2 bg-white rounded" *ngFor="let character of characters">
+        <div class="card-horizontal">
+            <div class="img-square-wrapper">
+                <img class="card-image" [src]="character.image" alt="Card image cap">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title mb-3">{{ character.name }}</h4>
+                <p class="card-text mb-1"> Gender: {{ character.gender | titlecase}}</p>
+                <p class="card-text mb-1"> Species: {{ character.species  | titlecase}}</p>
+                <p class="card-text mb-1"> Origin: {{ character.origin.name | titlecase}}</p>
+                <p class="card-text mb-1" > Status: 
+                <span class="badge badge-success" *ngIf="character.status  === 'Alive'">{{ character.status | titlecase}}</span>
+                <span class="badge badge-danger" *ngIf="character.status  === 'Dead'">{{ character.status | titlecase }}</span>
+                <span class="badge badge-light" *ngIf="character.status  === 'unknown'">{{ character.status | titlecase}} </span>
+
+            </p>
+            </div>
+        </div>
+    </div>
+</main>
